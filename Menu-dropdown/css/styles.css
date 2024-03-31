@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary: #000;
+  --background: #fafafa;
+  --secondary-background: #f2f2f2;
+  --gray: #847f90;
+  --gray-hover: #171717;
+  --prmimary-hover: #555;
+  --link-gray: #666;
+  --link-gray-hover: #171717;
+  --gray-border: #e6e6e6;
+  --white: #fcfcfc;
+  --navbar-height: 64px;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+}
