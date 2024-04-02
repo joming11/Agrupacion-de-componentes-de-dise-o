@@ -18,3 +18,121 @@ body {
   font-family: "Open sans", sans-serif;
   font-size: 16px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/******header******/
+.menu__wrapper {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100vw;
+  z-index: 2;
+  gap: 24px;
+  background-color: var(--background);
+  height: var(--navbar-height);
+  padding: 0 16px;
+  align-items: center;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Contenedor interno del header*/
+.menu__bar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
+}
+
+.navigation {
+  margin-left: 32px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--background);
+}
+
+.navigation > li {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  min-height: 36px;
+}
+
+.navigation > li > a {
+  color: var(--link-gray);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navigation > li > a:hover {
+  color: var(--link-gray-hover);
+}
+
+.navigation > li > button {
+  color: var(--link-gray);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  margin-right: -4px;
+  align-items: center;
+  min-height: 36px;
+  font-size: 14px;
+  gap: 4px;
+  font-family: "Open sans" sans-serif;
+  flex-wrap: nowrap;
+  border-radius: 999px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  background: none;
+  display: flex;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation > li > button > svg {
+  margin-top: 2px;
+  fill: var(--link-gray);
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation > li:hover > button svg {
+  fill: var(--link-gray-hover);
+  rotate: 180deg;
+}
+
+.navigation > li:hover > button {
+  color: var(--link-gray-hover);
+  background-color: var(--gray);
+}
+
+.navigation > li:hover .dropdown {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.99);
+    translatey: (0.7em);
+    transform-origin: top;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    translatey: (0);
+  }
+}
