@@ -257,7 +257,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 2rem;
     width: 2rem;
     min-width: 2rem;
@@ -265,7 +265,7 @@ body {
     pointer-events: all;
     gap: 0.25rem;
     flex-direction: column;
-    border: thin solid var(--gray-border);
+    /* border: thin solid var(--gray-border); */
   }
 
   .burger-menu svg {
