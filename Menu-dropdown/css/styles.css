@@ -136,3 +136,137 @@ body {
     translatey: (0);
   }
 }
+
+/*dropdown menu*/
+
+.dropdown__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+}
+
+.dropdown {
+  border-radius: 8px;
+  background-color: var(--white);
+  display: none;
+  padding: 8px;
+  width: 100%;
+  max-width: 800px;
+  border: thin solid var(--gray-border);
+  box-shadow: 0 50 100px -20px rgba(0, 0, 0, 0.12),
+    0 30 60px -30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/*organizacion de elementos dentro del menu*/
+.list-items-with-description {
+  list-style-type: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list-items-with-description > li {
+  display: flex;
+  padding: 8px;
+  gap: 16px;
+  width: 100%;
+}
+
+.list-items-with-description > li:hover {
+  background-color: var(--secondary-background);
+  border-radius: 6px;
+}
+
+.list-items-with-description > li svg {
+  stroke: var(--link-gray-hover);
+  stroke-width: 1px;
+  width: 32px;
+  height: 32px;
+}
+
+.item-title h3 {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--link-gray-hover);
+}
+
+.item-title p {
+  font-size: 12px;
+  white-space: nowrap;
+  color: var(--link-gray-hover);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.action-buttons a {
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 4px 8px;
+}
+
+.secondary {
+  background: none;
+  color: var(--link-gray-hover);
+  outline: none;
+  border: thin solid var(--gray-border);
+  border-radius: 6px;
+}
+
+.secondary:hover {
+  background: var(--secondary-background);
+}
+
+.primary {
+  color: var(--white);
+  border-radius: 6px;
+  background-color: var(--primary);
+  padding: 8px 16px;
+}
+
+.primary:hover {
+  background-color: var(--prmimary-hover);
+}
+
+.burger-menu {
+  display: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+/*Media querie*/
+@media (max-width: 769px) {
+  .hide {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    pointer-events: all;
+    gap: 4px;
+    flex-direction: column;
+    border: thin solid var(--gray-border);
+  }
+
+  .burger-menu svg {
+    height: 30px;
+    stroke: var(--link-gray);
+    width: 30px;
+  }
+}
