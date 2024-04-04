@@ -62,7 +62,7 @@ body {
   background-color: var(--background);
 }
 
-.navigation > li {
+.navigation li {
   display: flex;
   position: relative;
   cursor: pointer;
@@ -70,17 +70,17 @@ body {
   min-height: 36px;
 }
 
-.navigation > li > a {
+.navigation li a {
   color: var(--link-gray);
   font-size: 14px;
   text-decoration: none;
 }
 
-.navigation > li > a:hover {
+.navigation li a:hover {
   color: var(--link-gray-hover);
 }
 
-.navigation > li > button {
+.navigation li button {
   color: var(--link-gray);
   transition: all 0.3s ease;
   text-decoration: none;
@@ -103,23 +103,23 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.navigation > li > button > svg {
+.navigation li button svg {
   margin-top: 2px;
   fill: var(--link-gray);
   transition: all 0.5s ease-in-out;
 }
 
-.navigation > li:hover > button svg {
+.navigation li:hover button svg {
   fill: var(--link-gray-hover);
   rotate: 180deg;
 }
 
-.navigation > li:hover > button {
+.navigation li:hover button {
   color: var(--link-gray-hover);
   background-color: var(--gray);
 }
 
-.navigation > li:hover .dropdown {
+.navigation li:hover .dropdown {
   display: block;
 }
 
@@ -182,7 +182,7 @@ body {
   /* border-radius: 6px; */
 }
 
-.list-items-with-description > li svg {
+.list-items-with-description li svg {
   stroke: var(--link-gray-hover);
   stroke-width: 1px;
   width: 2.5rem;
